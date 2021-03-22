@@ -116,7 +116,7 @@ def scrape():
 
     # Navigate through all pages and get the full resolution hemisphere image
     browser.visit(hemispheres_url)
-    hemisphere_image_urls=[]
+    hemisphere_image_urls={}
     for i in range(len(hem_list)):
             html = browser.html
             soup = BeautifulSoup(html, 'html.parser')
@@ -125,11 +125,12 @@ def scrape():
             soup = BeautifulSoup(html, 'html.parser')
             title = hem_list[i]
             img_url = soup.find(class_='downloads')
-                
+            
+            #title = f"title{i}"
             hemisphere_dict = {}
-            hemisphere_dict['title'] = title
-            hemisphere_dict['img_url'] = img_url.a['href']
-            hemisphere_image_urls.append(hemisphere_dict)
+            hemisphere_dict['title{0}'.format(i)] = title
+            hemisphere_dict['img_url{0}'.format(i)] = img_url.a['href']
+            hemisphere_image_urls.update(hemisphere_dict)
             browser.back()
 
     #----------------------------------------------------------------------#
@@ -141,14 +142,20 @@ def scrape():
     #----------------------------------------------------------------------#
     #                       Collection of dictionaries                     #
     #----------------------------------------------------------------------#
-    mars_collection_list = []
-    mars_collection_list.append(news_dict)
-    mars_collection_list.append(jpl_featured)
-    mars_collection_list.append(mars_facts_dict)
-    mars_collection_list.append(hemisphere_image_urls)
+    # mars_collection_list = []
+    # mars_collection_list.append(news_dict)
+    # mars_collection_list.append(jpl_featured)
+    # mars_collection_list.append(mars_facts_dict)
+    # mars_collection_list.append(hemisphere_image_urls)
 
     # return mars_collection_list
-    return news_dict
+    mars_collection_dict = {}
+    mars_collection_dict.update(news_dict)
+    mars_collection_dict.update(jpl_featured)
+    mars_collection_dict.update(mars_facts_dict)
+    mars_collection_dict.update(hemisphere_image_urls)
+
+    return mars_collection_dict
 
     
 
