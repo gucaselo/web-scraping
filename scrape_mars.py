@@ -12,7 +12,7 @@ def scrape():
     executable_path = {'executable_path':ChromeDriverManager().install()}
 
     # create a new browser object by default it is firefox the default one
-    browser = Browser('chrome', **executable_path, headless = False) #headless true will open but not show interactions
+    browser = Browser('chrome', **executable_path, headless = False) #headless true will not open browser
 
     #----------------------------------------------------------------------#
     #                       NASA Mars' most recent news                    #
@@ -41,7 +41,6 @@ def scrape():
         
     for body in body_article:
         try:
-    #         print(body.text.strip())
             news_paragraph.append(body.text.strip())
         except:
             pass
@@ -142,13 +141,7 @@ def scrape():
     #----------------------------------------------------------------------#
     #                       Collection of dictionaries                     #
     #----------------------------------------------------------------------#
-    # mars_collection_list = []
-    # mars_collection_list.append(news_dict)
-    # mars_collection_list.append(jpl_featured)
-    # mars_collection_list.append(mars_facts_dict)
-    # mars_collection_list.append(hemisphere_image_urls)
-
-    # return mars_collection_list
+    # return mars_collection_dict
     mars_collection_dict = {}
     mars_collection_dict.update(news_dict)
     mars_collection_dict.update(jpl_featured)
