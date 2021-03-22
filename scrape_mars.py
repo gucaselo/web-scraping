@@ -83,7 +83,8 @@ def scrape():
 
     # Read url and returned a list of DataFrames
     mars_table = pd.read_html(mars_url)
-    mars_table = mars_table[1]
+    mars_table = mars_table[0]
+    mars_table = mars_table.rename(columns={0:'', 1:'Mars'})
 
     # Converted data to HTML table string
     html_mars_table = mars_table.to_html()
