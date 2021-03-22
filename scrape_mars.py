@@ -87,7 +87,7 @@ def scrape():
     mars_table = mars_table.rename(columns={0:'', 1:'Mars'})
 
     # Converted data to HTML table string
-    html_mars_table = mars_table.to_html()
+    html_mars_table = mars_table.to_html(index=False)
     mars_facts_dict = {}
     mars_facts_dict['mars_fact'] = html_mars_table
 

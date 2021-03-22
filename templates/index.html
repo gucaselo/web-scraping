@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Find a Phone</title>
+  <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -27,14 +27,16 @@
     </div>
 
     <!--Featured Image-->
-    <div>
-      <div class="float-left">
+    <div class="container">
+      <div style="float:left">
         <h1>Featured Mars Image</h1>
-        <img src="{{ mars_info.featured_jpl_image }}" alt="" width="50%">
+        <img src="{{ mars_info.featured_jpl_image }}" alt="" width="100%">
       </div>
       <div>
+        {{ mars_info.mars_fact | safe }}
         <!--table class="table table-hover" style="float:right; width: 30%">
           <thead>
+            <h3>Mars Facts</h3>
             <tr>
               <th>Firstname</th>
               <th>Lastname</th>
