@@ -10,20 +10,110 @@
 </head>
 
 <body>
-  <div class="container-flui">
+  <div class="container-fluid">
 
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape new Data</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
     <!-- Recent news -->
     <div class="row" id="craiglist-listings">
       <div class="col-md-12">
+        <h1>Latest Mars News</h1>
         <h2 class="heading">{{mars_info.recent_news}}</h2>
         <p>{{mars_info.recent_paragraph}}</p>
       </div>
     </div>
+
+    <!--Featured Image-->
+    <div>
+      <div class="float-left">
+        <h1>Featured Mars Image</h1>
+        <img src="https://static.scientificamerican.com/sciam/cache/file/B057439A-3F27-48F0-8EA54AF511520AAB_source.jpg" alt="" width="50%">
+      </div>
+      <div>
+        <table class="table table-hover" style="float:right; width: 30%">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+    <!--Mars Hemispheres Images-->
+    <div class="text-center">
+      <h1>Mars Hemispheres</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="#" target="_blank">
+              <img src="https://static.scientificamerican.com/sciam/cache/file/B057439A-3F27-48F0-8EA54AF511520AAB_source.jpg" alt="" style="width:100%">
+              <div class="caption">
+                <h3>Lorem ipsum donec id elit non mi porta gravida at eget metus.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="#" target="_blank">
+              <img src="https://static.scientificamerican.com/sciam/cache/file/B057439A-3F27-48F0-8EA54AF511520AAB_source.jpg" alt="" style="width:100%">
+              <div class="caption">
+                <h3>Lorem ipsum donec id elit non mi porta gravida at eget metus.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="#" target="_blank">
+              <img src="https://static.scientificamerican.com/sciam/cache/file/B057439A-3F27-48F0-8EA54AF511520AAB_source.jpg" alt="" style="width:100%">
+              <div class="caption">
+                <h3>Lorem ipsum donec id elit non mi porta gravida at eget metus.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <a href="#" target="_blank">
+              <img src="https://static.scientificamerican.com/sciam/cache/file/B057439A-3F27-48F0-8EA54AF511520AAB_source.jpg" alt="" style="width:100%">
+              <div class="caption">
+                <h3>Lorem ipsum donec id elit non mi porta gravida at eget metus.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    
 
   </div>
 </body>
