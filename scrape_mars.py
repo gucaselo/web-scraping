@@ -126,7 +126,6 @@ def scrape():
             title = hem_list[i]
             img_url = soup.find(class_='downloads')
             
-            #title = f"title{i}"
             hemisphere_dict = {}
             hemisphere_dict['title{0}'.format(i)] = title
             hemisphere_dict['img_url{0}'.format(i)] = img_url.a['href']
