@@ -34,20 +34,21 @@
     </div>
 
     <!--Featured Image-->
-    <div class="container row text-size">
-      <div class="col-sm-6 col-lg-6 image" style="">
-        <h1>Featured Mars Image</h1>
+    <div class="container-fluid row text-size">
+      <div class="row">
+        <h1 class="col-sm-6 col-lg-6" style="padding-left: 30px;">Featured Mars Image</h1>
+        <h1 class="col-sm-6 col-lg-6">Mars Facts</h1>
+      </div>
+      <div class="col-sm-6 col-lg-6 image">
         <img src="{{ mars_info.featured_jpl_image }}" alt="" width="100%">
       </div>
-      <div class="col-sm-6 col-lg-6 image" style="">
+      <div class="col-sm-6 col-lg-6 image">
         {{ mars_info.mars_fact | safe }}
       </div>
     </div>
     <br>
     <br>
-
-
-
+    
     <!--Mars Hemispheres Images-->
     <div class="text-center text-size">
       <h1>Mars Hemispheres</h1>
