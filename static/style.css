@@ -9,6 +9,7 @@
   background-color: black;
 }*/
 
+/* Manually made stars background for jumbotron*/
 /*.jumbotron {
 background-color:black;
 background-image:
@@ -20,8 +21,42 @@ background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
 background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }*/
 
+
+/* Constantly moving the background*/
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-webkit-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-ms-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+@-o-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -300px 0; }
+}
+
+
+
+
 .jumbotron {
   background-image: url("stars.jpg");
+
+  /* Animation of Background */
+  background-position: 0px 0px;
+  animation: animatedBackground 10s linear infinite;
+  -moz-animation: animatedBackground 10s linear infinite;
+  -webkit-animation: animatedBackground 10s linear infinite;
+  -ms-animation: animatedBackground 10s linear infinite;
+  -o-animation: animatedBackground 10s linear infinite;
 }
 
 .jumbotron h1 {
