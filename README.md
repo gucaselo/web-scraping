@@ -11,6 +11,7 @@ The following sites were scraped:
 * Flask Application
 * Python
 * Pandas
+* Splinter
 * PyMongo
 * HTML
 * CSS
